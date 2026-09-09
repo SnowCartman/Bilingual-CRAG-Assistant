@@ -22,6 +22,7 @@ repository ships the system, and **you point it at your own PDFs**
 
 <img width="1519" height="864" alt="Screenshot 2026-09-09 205437" src="https://github.com/user-attachments/assets/e20bb965-2293-4f5a-b564-02e2e0179241" />
 
+
 <img width="2544" height="1338" alt="Screenshot 2026-09-09 205515" src="https://github.com/user-attachments/assets/8173b9ee-a0a6-47ea-bfbb-24f145ee5952" />
 
 <!-- SCREENSHOT GOES HERE.
@@ -92,6 +93,7 @@ Full rationale for every choice above is in
 [`EVALUATION.md`](EVALUATION.md).
 
 <img width="2077" height="1258" alt="Screenshot 2026-09-09 205630" src="https://github.com/user-attachments/assets/acc21cb6-a164-4a4f-b62e-86692c5b6c98" />
+
 
 <img width="2553" height="1336" alt="Screenshot 2026-09-09 205552" src="https://github.com/user-attachments/assets/9445406d-157c-4d1d-ad08-784b786ed475" />
 
