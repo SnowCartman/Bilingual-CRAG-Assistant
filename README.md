@@ -24,14 +24,6 @@ repository ships the system, and **you point it at your own PDFs**
 <br>
 <img width="2544" height="1338" alt="Screenshot 2026-09-09 205515" src="https://github.com/user-attachments/assets/8173b9ee-a0a6-47ea-bfbb-24f145ee5952" />
 
-<!-- SCREENSHOT GOES HERE.
-     Add it on github.com: open this file -> pencil icon -> drag the image into
-     the editor at this line. GitHub uploads it and inserts the markdown for
-     you, so no image file needs to live in the repository.
-     Good candidates: the Pipeline Inspector with the animated CRAG diagram, or
-     a web-fallback query. Avoid any screen that shows textbook pages. -->
-
-
 ---
 
 ## The problem
@@ -247,7 +239,6 @@ EVALUATION.md           how retrieval + answers were measured
 ## Author
 
 Built by **Matthias Schütze** — [GitHub](https://github.com/SnowCartman) · [LinkedIn](https://www.linkedin.com/in/matthias-sch%C3%BCtze-2198ab264)
-<!-- Fill in when ready: · [LinkedIn](URL) · [email](mailto:ADRESSE) -->
 
 > Built as part of The AI Engineering Accelerator by NeoSage Academy.
 > https://academy.neosage.io
