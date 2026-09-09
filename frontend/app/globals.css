@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Claude-inspired palette (warm + natural) */
+:root {
+  --cream: #FAF9F5;
+  /* parchment darkened from #F5F4EE -> #EBE7DC for stronger surface vs
+     background separation in light mode. */
+  --parchment: #EBE7DC;
+  --ink: #1A1915;
+  /* mute darkened to #4D4639 for WCAG-AAA-ish contrast (~7.5:1) against
+     cream background. Light-mode small-text legibility was straining at
+     the original #807A6F (~3.9:1); dark-mode mute is untouched. */
+  --mute: #4D4639;
+  --claude: #D97757;
+  --claude-soft: #E8A584;
+  --claude-deep: #B45F44;
+  --sand: #E5DCC5;
+  --sage: #8A9A7B;
+  --clay: #A0826D;
+  --honey: #D4A574;
+  --rust: #B85C38;
+  --stone: #A8A29E;
+  /* dusty-rose -- the Tavily/web origin badge needs a
+     hue distinct from honey (cache) + claude (accent) so the three origins
+     stay readable next to each other in the source card list. */
+  --dusty-rose: #C49191;
+
+  /* Text-only darker variants of the soft accent hues (sage, dusty-rose).
+     In light mode the soft hues have great identity but poor contrast on
+     cream (~3:1). These deeper variants pass WCAG AA when used as text.
+     Dark mode re-maps them back to the soft hues (text-on-dark works). */
+  --sage-text: #4F5E40;
+  --dusty-rose-text: #8A4D4D;
+  --rust-text: #8A3A24;
+  /* honey + clay joined the -text family for the pipeline diagram: the
+     base hues sit at ~2:1 on cream and vanish as 2px strokes / labels.
+     Dark mode maps them back to the base hues -- zero change there.
+     honey-text is a GOLDEN amber (R >> G), not the olive #8A6A2E the
+     cache pill uses -- as a colored stroke the olive read green. */
+  --honey-text: #9C6A12;
+  --clay-text: #7A5942;
+
+  /* Semantic tokens (light) */
+  --background: var(--cream);
+  --surface: var(--parchment);
+  --foreground: var(--ink);
+  --muted: var(--mute);
+  --border: var(--sand);
+  --accent: var(--claude);
+  --accent-soft: var(--claude-soft);
+  --accent-deep: var(--claude-deep);
+  --on-accent: var(--cream);
+  --danger: var(--rust);
+}
+
+.dark {
+  --cream-dark: #1A1915;
+  --parchment-dark: #24221E;
+  --ink-dark: #F2EEE3;
+  --mute-dark: #A8A29E;
+  --sand-dark: #3A352D;
+
+  --background: var(--cream-dark);
+  --surface: var(--parchment-dark);
+  --foreground: var(--ink-dark);
+  --muted: var(--mute-dark);
+  --border: var(--sand-dark);
+  --accent: var(--claude);
+  --accent-soft: var(--claude-deep);
+  --accent-deep: var(--claude-soft);
+  --on-accent: var(--cream);
+  --danger: var(--rust);
+  /* Dark mode: text-on-dark works fine with the soft hues -- map back. */
+  --sage-text: var(--sage);
+  --dusty-rose-text: var(--dusty-rose);
+  --rust-text: var(--rust);
+  --honey-text: var(--honey);
+  --clay-text: var(--clay);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-deep: var(--accent-deep);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+
+  --color-claude: var(--claude);
+  --color-claude-soft: var(--claude-soft);
+  --color-claude-deep: var(--claude-deep);
+  --color-sage: var(--sage);
+  --color-sage-text: var(--sage-text);
+  --color-clay: var(--clay);
+  --color-honey: var(--honey);
+  --color-honey-text: var(--honey-text);
+  --color-clay-text: var(--clay-text);
+  --color-rust: var(--rust);
+  --color-rust-text: var(--rust-text);
+  --color-dusty-rose: var(--dusty-rose);
+  --color-dusty-rose-text: var(--dusty-rose-text);
+  --color-sand: var(--sand);
+  --color-cream: var(--cream);
+  --color-parchment: var(--parchment);
+  --color-ink: var(--ink);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Mono", "Liberation Mono", monospace;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mute);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated pipeline-diagram edges (pipeline-diagram.tsx). The dash pattern
+   totals 16px, so an offset of -32 loops seamlessly (2 full periods). */
+@keyframes dashFlow {
+  to { stroke-dashoffset: -32; }
+}
+.flow-line {
+  stroke-dasharray: 7 9;
+  animation: dashFlow 1.1s linear infinite;
+}
+
+/* Pipeline-diagram drawing canvas. LIGHT mode gets a creamy parchment
+   panel so the bright cream background stops glaring and the strokes
+   gain contrast; node cards flip to cream on top of it. DARK mode is
+   deliberately untouched: transparent canvas, surface node cards --
+   exactly the look that was already approved. */
+.pipe-canvas {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  --pipe-node-fill: var(--background);
+  --pipe-halo: var(--surface);
+}
+.dark .pipe-canvas {
+  background: transparent;
+  border-color: transparent;
+  --pipe-node-fill: var(--surface);
+  --pipe-halo: var(--background);
+}
+

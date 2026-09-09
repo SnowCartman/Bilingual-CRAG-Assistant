@@ -1,0 +1,28 @@
+# Slim runtime dependencies for the Docker backend image.
+#
+# Why a separate file from the ingest dependencies:
+#   - Indexing a corpus can pull torch and marker-pdf (plus CUDA packages for
+#     GPU OCR). None of that runs in the FastAPI serving image -- shipping it
+#     would take the image from ~500MB to ~5GB. See requirements-ingest.txt.
+#   - fastembed pulls onnxruntime (CPU) automatically; no GPU runtime needed
+#     for BM25 sparse embedding at query time.
+#   - Voyage embed + rerank go through plain HTTP requests in rag_pipeline.py
+#     (no voyageai SDK import), so we don't ship voyageai either.
+#
+# Pinned as minimums rather than exact versions: these are stable, widely used
+# packages and the smoke tests in scripts/ catch a breaking upgrade.
+
+fastapi>=0.115
+uvicorn[standard]>=0.32
+sse-starlette>=2.1
+pydantic-settings>=2.6
+
+qdrant-client>=1.16
+fastembed>=0.7.4
+google-genai>=1.59
+redis>=5
+opik>=1.7
+
+requests>=2.32
+python-dotenv>=1.2.1
+numpy>=1.26

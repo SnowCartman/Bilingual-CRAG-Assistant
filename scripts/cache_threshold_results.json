@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "embed_model": "voyage-multilingual-2",
+    "embed_dim": 1024,
+    "n_positive_pairs": 10,
+    "n_negative_pairs": 45,
+    "thresholds": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25
+    ],
+    "selection_criterion": "argmax 2*TPR - FPR; ties broken by lower FPR"
+  },
+  "positive_pair_distances": [
+    {
+      "id": "q1",
+      "distance": 0.1032
+    },
+    {
+      "id": "q2",
+      "distance": 0.1494
+    },
+    {
+      "id": "q3",
+      "distance": 0.1804
+    },
+    {
+      "id": "q4",
+      "distance": 0.1539
+    },
+    {
+      "id": "q5",
+      "distance": 0.1431
+    },
+    {
+      "id": "q6",
+      "distance": 0.1546
+    },
+    {
+      "id": "q7",
+      "distance": 0.0527
+    },
+    {
+      "id": "q8",
+      "distance": 0.0628
+    },
+    {
+      "id": "q9",
+      "distance": 0.1011
+    },
+    {
+      "id": "q10",
+      "distance": 0.1286
+    }
+  ],
+  "negative_pair_distance_summary": {
+    "min": 0.3955,
+    "median": 0.7458,
+    "max": 0.8665
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.05,
+      "tp": 0,
+      "fp": 0,
+      "tpr": 0.0,
+      "fpr": 0.0,
+      "score": 0.0
+    },
+    {
+      "threshold": 0.1,
+      "tp": 2,
+      "fp": 0,
+      "tpr": 0.2,
+      "fpr": 0.0,
+      "score": 0.4
+    },
+    {
+      "threshold": 0.15,
+      "tp": 7,
+      "fp": 0,
+      "tpr": 0.7,
+      "fpr": 0.0,
+      "score": 1.4
+    },
+    {
+      "threshold": 0.2,
+      "tp": 10,
+      "fp": 0,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "score": 2.0
+    },
+    {
+      "threshold": 0.25,
+      "tp": 10,
+      "fp": 0,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "score": 2.0
+    }
+  ],
+  "recommended_threshold": 0.2,
+  "recommended_reason": "At threshold 0.2: TPR=1.0 (10/10), FPR=0.0 (0/45)"
+}

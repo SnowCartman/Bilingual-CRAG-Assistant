@@ -1,0 +1,56 @@
+# Local docker compose for the Bilingual CRAG Assistant. Run from the repo
+# root:
+#
+#   docker compose up --build
+#
+# Redis, Qdrant, Voyage, Gemini, Opik and Tavily are all external services --
+# their hosts and keys come from the .env file (copy .env.example to .env and
+# fill in your own). None of them run as a container here.
+#
+# The browser hits the backend at http://localhost:8000 (the host's port,
+# not the Compose internal hostname) because NEXT_PUBLIC_* env vars are
+# inlined into the client-side bundle that runs in the user's browser.
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    image: bilingual-crag-backend:local
+    container_name: bilingual-crag-backend
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      PORT: "8000"
+    ports:
+      - "8000:8000"
+    # Persist the local feedback jsonl on the host so we can grep / inspect
+    # it without exec'ing into the container. Opik still receives the same
+    # data via the cloud trace; this is the audit-trail copy.
+    volumes:
+      - ./scripts:/app/scripts
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Default is localhost for desktop dev. Override for LAN access
+        # (iPad/Handy on same WiFi) by exporting API_BASE_URL before the
+        # `docker compose up --build`, e.g.:
+        #   API_BASE_URL=http://192.168.2.96:8000 docker compose up --build
+        # Next.js inlines NEXT_PUBLIC_* into the client bundle at build time,
+        # so a rebuild is required when this value changes.
+        NEXT_PUBLIC_API_BASE: ${API_BASE_URL:-http://localhost:8000}
+    image: bilingual-crag-frontend:local
+    container_name: bilingual-crag-frontend
+    environment:
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped

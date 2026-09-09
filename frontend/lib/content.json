@@ -1,0 +1,56 @@
+{
+  "_comment": "EVERYTHING THE UI SAYS ABOUT *YOUR* CORPUS LIVES IN THIS FILE. Edit it and rebuild the frontend -- no component code needs touching. The values shipped here describe the library this system was built for; replace them with your own. Cyrillic is written as escape sequences so the file survives toolchains that read it as cp1252, but plain UTF-8 works too.",
+  "overview": {
+    "intro": "A CRAG-powered (Corrective RAG) study and reference assistant built for my wife -- a professional German-Russian translator. It answers grammar and vocabulary questions in German or Russian and backs every claim with [book, page] citations from her own personal library.",
+    "stats": [
+      {
+        "value": "22",
+        "label": "PDF textbooks as the foundation"
+      },
+      {
+        "value": "3,053",
+        "label": "pages across two languages (DE + RU)"
+      },
+      {
+        "value": "4,648",
+        "label": "chunks (logical 2000/200) in the Qdrant vector index"
+      },
+      {
+        "value": "Top-10",
+        "label": "evidence chunks after hybrid search + reranking"
+      }
+    ],
+    "statsNote": "These figures describe the library this was built for. Point the system at your own PDFs and they change -- only Top-10 is a setting."
+  },
+  "welcome": {
+    "title": "Hallo :) Was darf ich \u00fcbersetzen oder erkl\u00e4ren?",
+    "subtitle": "Frag auf Deutsch oder Russisch. Antworten zitieren Lehrbuch-Quellen; reicht der Korpus nicht, erg\u00e4nzt die Pipeline mit Web-Suche."
+  },
+  "chips": [
+    {
+      "label": "Konjunktiv I?",
+      "query": "Was ist der Konjunktiv I und wann wird er verwendet?",
+      "tag": "factual"
+    },
+    {
+      "label": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439: \u0431\u043b\u043e\u043d\u0434?",
+      "query": "\u041a\u0430\u043a \u043d\u0430\u0437\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u043f\u043e-\u043d\u0435\u043c\u0435\u0446\u043a\u0438 \u0446\u0432\u0435\u0442 \u0432\u043e\u043b\u043e\u0441 \u00ab\u0431\u0435\u043b\u043e\u043a\u0443\u0440\u044b\u0439\u00bb (\u0441\u0432\u0435\u0442\u043b\u043e-\u0440\u0443\u0441\u044b\u0439)?",
+      "tag": "rerank-repair"
+    },
+    {
+      "label": "Schwedisch?",
+      "query": "Wie w\u00fcrde man auf Schwedisch 'Guten Tag' sagen?",
+      "tag": "out-of-corpus"
+    },
+    {
+      "label": "Modalpartikeln?",
+      "query": "Welche Modalpartikeln signalisieren H\u00f6flichkeit im Deutschen?",
+      "tag": "analytical"
+    },
+    {
+      "label": "Siebenschl\u00e4fer?",
+      "query": "Was ist der Siebenschl\u00e4fertag und welche Bauernregel geh\u00f6rt dazu?",
+      "tag": "cultural"
+    }
+  ]
+}

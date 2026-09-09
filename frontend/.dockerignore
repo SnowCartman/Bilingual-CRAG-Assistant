@@ -1,0 +1,29 @@
+# Build-context excludes for frontend/Dockerfile (context = frontend/).
+
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Local secrets + env files
+.env
+.env.*
+
+# Editor + OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# README + tooling (not needed in the image)
+README.md

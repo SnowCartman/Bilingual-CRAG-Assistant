@@ -1,0 +1,25 @@
+# Dependencies for scripts/ingest.py -- indexing a PDF corpus into Qdrant.
+#
+# Kept separate from requirements-backend.txt on purpose: none of this runs in
+# the serving image, and the serving image should stay small.
+#
+#   pip install -r requirements-ingest.txt
+#   python scripts/ingest.py --source ./data/books
+#
+# NOT listed here, because most corpora do not need it:
+#   marker-pdf  -- OCR for SCANNED books, and markdown structure (headings,
+#                  tables) that plain text extraction throws away. It pulls in
+#                  torch. On CPU it is slow enough to be impractical for a
+#                  whole shelf; with a CUDA GPU (a torch build matching your
+#                  driver, plus the nvidia-* CUDA runtime packages pip installs
+#                  with it) it is roughly an order of magnitude faster. Install
+#                  it only if `--extractor pypdf` returns no text for a book:
+#                      pip install marker-pdf
+#                  and run with `--extractor marker`.
+
+pypdf>=5.1
+langchain-text-splitters>=0.3
+qdrant-client>=1.16
+fastembed>=0.7.4
+requests>=2.32
+python-dotenv>=1.2.1

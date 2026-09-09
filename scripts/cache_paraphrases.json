@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1",
+    "language": "de",
+    "original": "Welche Wechselpraepositionen mit der Frage 'wohin?' verlangen den Akkusativ?",
+    "paraphrase": "Welche Pr\u00e4positionen, die eine Richtung angeben, ben\u00f6tigen bei der Frage \"wohin?\" den Akkusativ?"
+  },
+  {
+    "id": "q2",
+    "language": "ru",
+    "original": "\u041a\u0430\u043a\u0438\u0435 \u0444\u043e\u0440\u043c\u044b \u0432\u0435\u0436\u043b\u0438\u0432\u043e\u0433\u043e \u043e\u0431\u0440\u0430\u0449\u0435\u043d\u0438\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442\u0441\u044f \u0432 \u0440\u0443\u0441\u0441\u043a\u043e\u043c \u044f\u0437\u044b\u043a\u0435 (Sie / \u0412\u044b / \u0442\u044b)?",
+    "paraphrase": "Welche Anredeformen existieren im Russischen, um H\u00f6flichkeit auszudr\u00fccken (analog zu Sie / \u0412\u044b / \u0442\u044b)?"
+  },
+  {
+    "id": "q3",
+    "language": "ru",
+    "original": "\u041a\u0430\u043a \u043d\u0430\u0437\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u043f\u043e-\u043d\u0435\u043c\u0435\u0446\u043a\u0438 \u0446\u0432\u0435\u0442 \u0432\u043e\u043b\u043e\u0441 \u00ab\u0431\u0435\u043b\u043e\u043a\u0443\u0440\u044b\u0439\u00bb (\u0441\u0432\u0435\u0442\u043b\u043e-\u0440\u0443\u0441\u044b\u0439)?",
+    "paraphrase": "Wie nennt man auf Deutsch die Haarfarbe, die als \"blond\" oder \"hellbraun\" beschrieben wird?"
+  },
+  {
+    "id": "q4",
+    "language": "ru",
+    "original": "\u0427\u0442\u043e \u043e\u0437\u043d\u0430\u0447\u0430\u0435\u0442 \u043d\u0435\u043c\u0435\u0446\u043a\u043e\u0435 \u0441\u043b\u043e\u0432\u043e \u00abSiebenschl\u00e4fer\u00bb \u0438 \u043a\u0430\u043a \u043e\u043d\u043e \u043f\u0435\u0440\u0435\u0432\u043e\u0434\u0438\u0442\u0441\u044f \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a?",
+    "paraphrase": "Wie lautet die deutsche Bedeutung des Wortes \u201eSiebenschl\u00e4fer\u201c und welche russische Entsprechung gibt es daf\u00fcr?"
+  },
+  {
+    "id": "q5",
+    "language": "de",
+    "original": "Stimmt die alte Wetterregel \u00abAbendrot, Schoenwetterbot - Morgenrot, schlecht Wetter droht\u00bb?",
+    "paraphrase": "Ist die traditionelle Bauernregel, die besagt, dass Abendrot auf gutes Wetter und Morgenrot auf schlechtes Wetter hindeutet, wissenschaftlich korrekt?"
+  },
+  {
+    "id": "q6",
+    "language": "de",
+    "original": "Was ist der Unterschied zwischen 'kennen' und 'wissen'? Wann benutzt man welches Verb, und welche grammatischen Strukturen folgen jeweils?",
+    "paraphrase": "K\u00f6nnen Sie die Bedeutungsunterschiede und die jeweiligen grammatischen Anforderungen der Verben 'kennen' und 'wissen' erl\u00e4utern, einschlie\u00dflich der F\u00e4lle, in denen jedes Verb angebracht ist?"
+  },
+  {
+    "id": "q7",
+    "language": "de",
+    "original": "Wann verwendet man die Praeposition 'zu' mit Dativ, um eine Richtung anzugeben (z.B. zu meinem Bruder gehen)? Wie unterscheidet sich das von 'in' + Akkusativ und 'nach' bei Laendern?",
+    "paraphrase": "K\u00f6nnen Sie erkl\u00e4ren, in welchen F\u00e4llen die Pr\u00e4position 'zu' im Dativ benutzt wird, um eine Richtung zu beschreiben, wie im Beispiel 'zu meinem Bruder gehen', und wie sich dies von der Verwendung von 'in' mit Akkusativ und 'nach' bei L\u00e4ndern abgrenzt?"
+  },
+  {
+    "id": "q8",
+    "language": "mixed",
+    "original": "Welche Phrasen verwendet man auf Deutsch und Russisch beim ersten Geschaeftskontakt (Begruessung und Selbstvorstellung)?",
+    "paraphrase": "Wie begr\u00fc\u00dft und stellt man sich auf Deutsch und Russisch bei einer ersten gesch\u00e4ftlichen Begegnung vor?"
+  },
+  {
+    "id": "q9",
+    "language": "de",
+    "original": "Welche deutschen Advents- und Weihnachtsgedichte fuer Kinder gibt es, und welche Motive kommen darin vor?",
+    "paraphrase": "K\u00f6nnen Sie mir einige deutsche Advents- und Weihnachtsgedichte f\u00fcr Kinder empfehlen und mir sagen, welche Themen in diesen Gedichten behandelt werden?"
+  },
+  {
+    "id": "q10",
+    "language": "mixed",
+    "original": "Welche typischen Fehler machen russische Muttersprachler beim Erlernen der deutschen Artikel und Kasus?",
+    "paraphrase": "Worin liegen die h\u00e4ufigsten Schwierigkeiten f\u00fcr Russischsprachige bei der Aneignung der deutschen Artikel und der Deklination der Kasus?"
+  }
+]

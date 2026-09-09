@@ -1,0 +1,46 @@
+# Secrets -- NEVER commit
+.env
+.env.local
+*.key
+
+# Your data / corpus -- bring your own; never published
+data/
+data/raw/
+data/processed/
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# Runtime artifacts
+scripts/feedback.jsonl
+chat_history.json
+
+# Pre-publish check output (local only)
+share_check_report.txt
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Local screenshots -- README images are uploaded through GitHub's web editor
+# and served from user-attachments, so no image files live in the repo.
+*.png
+*.jpg
+*.jpeg
+*.gif

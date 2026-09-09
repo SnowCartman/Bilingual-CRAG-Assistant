@@ -1,0 +1,39 @@
+# Build-context excludes for backend.Dockerfile (context = repo root).
+# Keeps the build context small and prevents secrets from being COPYed in.
+
+# Frontend - has its own Dockerfile + .dockerignore.
+frontend/
+
+# Python caches
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtualenvs
+.venv/
+venv/
+
+# Local secrets - injected via Compose env_file at runtime
+.env
+.env.*
+
+# Docs, corpus and offline tooling (not needed in the serving image)
+*.md
+data/
+scripts/
+
+# Editor + OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Logs + transient feedback
+*.log
+**/feedback.jsonl
