@@ -246,7 +246,7 @@ EVALUATION.md           how retrieval + answers were measured
 
 ## Author
 
-Built by **Matthias Schütze** — [GitHub](https://github.com/SnowCartman) [LinkedIn](www.linkedin.com/in/matthias-schütze-2198ab264)
+Built by **Matthias Schütze** — [GitHub](https://github.com/SnowCartman) · [LinkedIn](https://www.linkedin.com/in/matthias-sch%C3%BCtze-2198ab264)
 <!-- Fill in when ready: · [LinkedIn](URL) · [email](mailto:ADRESSE) -->
 
 > Built as part of The AI Engineering Accelerator by NeoSage Academy.
